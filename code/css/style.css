@@ -76,7 +76,11 @@ nav .icon-logo{
     background-size: cover;
 }
 #main_ad>.carousel-inner>.item>img {
-    width:100%;
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100%
+    /*width:100%;*/
 }
 
 /*Ã§â€°Â¹Ã¨â€°Â²Ã¤Â»â€¹Ã§Â»Â*/
@@ -125,7 +129,7 @@ nav .icon-logo{
     text-decoration: none;
 }
 #product>.container>.ul-wapper>.nav-tabs>li.active>a{
-  
+
     border:0;
      border-bottom: 4px solid #E92322;
 }
@@ -447,7 +451,7 @@ fieldset[disabled] .navbar-itcast .btn-link:focus {
     float: right;
     position:relative;
     color: #333;
-  
+
    border-left:1px dashed #ddd;
    padding:45px 0
 
