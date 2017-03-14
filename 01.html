@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin-left:300px;
+
+        }
+        input{
+            width: 40px;
+            margin: 10px auto;
+        }
+        .box{
+            width: 230px;
+            height: 140px;
+        }
+        button{
+            position: absolute;
+            top: 120px;
+            left: 550px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+<label>第一个的点 X:<input type="text" name="x1">  Y: <input type="text" name="y1"></label>
+<label>第二个的点 X:<input type="text" name="x2">  Y: <input type="text" name="y2"></label>
+<label>第三个的点 X:<input type="text" name="x3">  Y: <input type="text" name="y3"></label>
+</div>
+<button>三角形</button>
+<div class="pic">
+<canvas height="600" width="800" id="canvas" style="border: 1px solid green" />
+    <span class="glyphicon glyphicon-minus"></span>
+</div>
+
+
+<script type="text/javascript">
+    //辅助构造器
+    function Point(x,y) {
+        this.x=x;
+        this.y=y;
+    }
+    //计算两点之间的距离
+    function Line(p1,p2) {
+        this.p1=p1;
+        this.p2=p2;
+        this.length=Math.sqrt(Math.pow(p1.x-p2.x,2)+Math.pow(p1.y-p2.y,2));
+
+    }
+    function Shape() {
+        this.points=[];
+        this.lines=[];
+        this.init();//定义原型
+    }
+    //使用对象标识法定义方法
+    Shape.prototype={
+        constructor:Shape,
+        init:function(){
+            if(typeof this.context==='undefined'){
+                var canvas=document.getElementById('canvas');
+                Shape.prototype.context=canvas.getContext('2d');
+            }
+        },
+        //通过点画出图形的函数
+        draw:function () {
+            var ctx=this.context;
+            ctx.strokeStyle=this.getColor();
+            ctx.beginPath();
+            ctx.moveTo(this.points[0].x,this.points[0].y);
+            for(var i=1;i<this.points.length;i++){
+                ctx.lineTo(this.points[i].x,this.points[i].y);
+            }
+            ctx.closePath();
+            ctx.stroke();
+        },
+
+        getColor:function(){
+            var rgb=[];
+            for(var i=0;i<3;i++){
+                rgb[i] = Math.round(255 * Math.random());
+            }
+            return 'rgb(' + rgb.join(',') + ')';
+        },
+        getLines:function(){
+            if(this.lines.length>0){
+                return this.lines;
+            }
+            var lines=[];
+            for(var i=0;i<this.points.length;i++){
+                lines[i]=new Line(this.points[i],(this.points[i+1])?this.points[i+1]:this.points[0]);
+            }
+            this.lines=lines;
+            return lines;
+        },
+        //shell method,to implemented by childern
+        getArea:function(){},
+        //sum the lengths of all lines
+        getPerimeter:function () {
+            var lines=this.getLines();
+            var perim=0;
+            for(var i=0;i<lines.length;i++){
+                perim+=lines[i].length;
+            }
+            return perim;
+        }
+    };
+    //子对象构造器
+    function Triangle(a,b,c) {
+        this.points=[a,b,c];
+        this.getArea=function () {
+            var p=this.getPerimeter();
+            var s=p/2;
+            return Math.sqrt(
+                    s
+                    *(s-this.lines[0].length)
+                    *(s-this.lines[1].length)
+                    *(s-this.lines[2].length)
+            );
+        };
+    }
+    //矩形
+    function Rectangle(p,side_a,side_b) {
+        this.points=[
+            p,                           //p是一个Point对象
+            new Point(p.x+side_a,p.y),   //top right
+            new Point(p.x+side_a,p.y+side_b),//bottom right
+            new Point(p.x,p.y+side_b)        //bottom left
+        ];
+        this.getArea=function () {
+           return side_a*side_b;
+        }
+    }
+    //正方形
+    function Square(p,side) {
+        Rectangle.call(this,p,side,side);
+    }
+    (function () {
+        var s=new Shape();
+        Triangle.prototype=s;
+        Rectangle.prototype=s;
+        Square.prototype=s;
+    })();
+    function inherit(Child,Parent){
+        var extensions=Child.prototype;
+        //用F（）作为媒介继承
+        var F=function(){};
+        F.prototype=Parent.prototype;
+        Child.prototype=new F();
+        Child.prototype.constructor=Child;
+        Child.prototype.uber=Parent;
+        //keep track of who inherits the Parent
+        if(!Parent.children){
+            Parent.children=[];
+        }
+        Parent.children.push(Child);
+        // carry over stuff previsouly added to the prototype
+        // because the prototype is now overwritten completely
+        for(var i in extensions){
+            if(extensions.hasOwnProperty(i)){
+                Child.prototype[i]=extensions[i]
+            }
+        }
+    }
+    document.querySelector('button').onclick=function () {
+        var x1=document.querySelector("input[name=x1]").value;
+        var y1=document.querySelector("input[name=y1]").value;
+        var x2=document.querySelector("input[name=x2]").value;
+        var y2=document.querySelector("input[name=y2]").value;
+        var x3=document.querySelector("input[name=x3]").value;
+        var y3=document.querySelector("input[name=y3]").value;
+        var p1=new Point(x1,y1);
+        var p2=new Point(x2,y2);
+        var p3=new Point(x3,y3);
+        var t=new Triangle(p1,p2,p3);
+        t.draw();
+        t.getPerimeter();
+//        var inher=new inherit(t,s);
+    }
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
