@@ -1,0 +1,59 @@
+.sell-job label, .sell-industry label,.sell-major label, .ch_province label{
+	margin-right: 10px;
+}
+.table-fix1, .table-fix2, .table-fix3, .table-fix4{
+	position: relative;
+}
+.sell-job, .sell-industry,.sell-major, .ch_province{
+	clear: both;
+	position: absolute;
+	display: table;
+
+	left: -50px;
+	z-index: 12;
+	width: 643px;
+	background-color: #FFF;
+}
+.sell-job, .sell-industry{
+	top: -200px;
+}
+.sell-major{
+	top: -150px;
+}
+.ch_province{
+	top: -150px;
+}
+.major-td1{
+	width: 80px;
+	font-size: 15px;
+}
+.offbtn{
+	color: red;
+	display: block;
+	float: right;
+	width: 20px;
+	height: 20px;
+	line-height: 1.5em;
+	text-align: center;
+	border: solid 1px rgb(221, 221, 221);
+
+}
+.ch-province-p,.job-p, .industry-p, .major-p{
+
+	height: 30px;
+	width: 127px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 15px;
+	border: 1px solid #ccc;
+
+}
+.major-parent{
+	margin-top: 10px;
+}
+.major-child label{
+	font-weight: 400;
+}
+.ch_province label{
+	width: 60px;
+}
