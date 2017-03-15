@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电子科技大学研究生就业信息网</title>
+    <!--ie兼容视图-->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!--css-->
+    <link rel="stylesheet" href="../css/lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../js/lib/html5shiv/html5shiv.min.js"></script>
+    <script src="../js/lib/respond/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body>
+<div class="top clearfix">
+    <div class="containe">
+        <div class="logo">
+            <h1>电子科技大学</h1>
+
+            <p>研究生就业信息网</p>
+        </div>
+
+            <div class="admin-content">
+                <ul>
+                    <li>
+                        <a class="top-first-a" href="/admin/login">管理入口</a>
+                    </li>
+                    <li>
+                        <a>加入收藏</a>
+                    </li>
+                    <li>
+                        <a href="http://gr.uestc.edu.cn/job/index.shtml">旧站入口</a>
+                    </li>
+                </ul>
+                <form action="/indexSearch" target="" method="post">
+                    <input type="text" class="search_text" name="value" placeholder="搜索文章和附件..."/>
+                    <input type="submit" class="search_btn" value="search"/>
+                </form>
+            </div>
+    </div>
+</div>
+
+        <nav class="navbar navbar-wpc">
+            <div class="containe">
+                <div class="collapse navbar-collapse" id="nav_List">
+                    <div class="navbar-header">
+                    <ul class="nav navbar-nav">
+                        <li id="nav-li-1" class="active">
+                        <a href="/index">首页</a>
+                        </li>
+                        <li>
+                        <a href="/page/notice">通知公告</a>
+                        </li>
+                        <li>
+                        <a href="/page/jobInfo" class="showLi" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">就业信息<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                        <li>
+                        <a href="/articleList/jobInfo_recruit">招聘信息</a>
+                        </li>
+                        <li>
+                        <a href="/articleList/jobInfo_meeting">招聘会信息</a>
+                        </li>
+                        <li class="last-li">
+                        <a href="/articleList/jobInfo_internship">实习信息</a>
+                        </li>
+                        </ul>
+                        </li>
+                        <li>
+                        <a href="/page/guide" class="showLi" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">办事指南 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                        <li>
+                        <a href="/articleList/guide_student">学生办事</a>
+                        </li>
+                        <li class="last-li">
+                        <a href="/articleList/guide_company">用人单位</a>
+                        </li>
+                        </ul>
+                        </li>
+                        <li>
+                        <a href="/page/jobGuide" class="showLi" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">就业指导<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                        <li>
+                        <a href="/articleList/jobGuide_policy">就业政策</a>
+                        </li>
+                        <li>
+                        <a href="/articleList/jobGuide_plan">职业规划</a>
+                        </li>
+                        <li class="last-li">
+                        <a href="/articleList/jobGuide_cv">简历制作</a>
+                        </li>
+                        </ul>
+                        </li>
+                        <li>
+                        <a href="/download">文档下载</a>
+                        </li>
+                        <li>
+                        <a href="/week">一周招聘会</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </nav>
+
+<div class="wrap clearfix">
+    <div class="containe">
+        <div class="main-left ">
+            <div class="kcBox-t1">
+                <!--  <img src="/image/1131768.gif" />
+                -->
+                <h2 class="std-enter">学生入口</h2>
+                <ul>
+                    <li><span class="glyphicon glyphicon-triangle-right"></span>
+                        <a href="http://gms.uestc.edu.cn/gms_sso/login?service=http%3A%2F%2Fgms.uestc.edu.cn%2FHome.html">GMS</a>
+                    </li>
+                    <li style=" border-bottom: none;">
+                        <span class="glyphicon glyphicon-triangle-right"></span>
+                        <a href="/search">招聘信息查询</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="kcBox-t2">
+                <!-- <img src="/image/jy_18-09.jpg" />
+                -->
+                <h2>用人单位入口</h2>
+                <ul>
+                    <li>
+                        <span class="glyphicon glyphicon-triangle-right"></span>
+                        <a href="/user/register">用人单位注册</a>
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-triangle-right"></span>
+                        <a href="/user/login">招聘信息发布</a>
+                    </li>
+                    <li style=" border-bottom: none;">
+                        <span class="glyphicon glyphicon-triangle-right"></span>
+                        <a href="/user/login">招聘会预定</a>
+                    </li>
+                </ul>
+                <h2 ><a href="http://www.51shuangxuan.com/weba/web_login/" style="color: #FFF;">双选汇官网入口</a></h2>
+                <!--<h2 ><a href="http://www.wandoujia.com/apps/lucky_xiao.com.myapplication/download" style="color: #FFF;">官方Android应用下载</a></h2>-->
+            </div>
+            <div class="kcBox-t3">
+                <ul>
+                    <li><p>就业办联系人</p></li>
+                    <li><span>田原、罗杨</span></li>
+                    <li><span>就业办地址：清水河主楼B2-410A</span></li>
+                    <li><span>就业办电话：028-61830039</span></li>
+                    <li><span>Email：yjsjob@uestc.edu.cn</span></li>
+                    <li><p>正常手续办理时间:除节假日</p></li>
+                    <li><span>上午：9：00 —— 12：00</span></li>
+                    <li><span>下午：13：00 —— 17：00</span></li>
+                    <li><p>高峰手续办理时间:除节假日</p></li>
+                    <li><span>上午：9：00 —— 12：00</span></li>
+                    <li><span>下午：13：00 —— 20：00</span></li>
+                    <li><p>户籍相关手续办理时间：</p></li>
+                    <li><span>周一、周三上午</span></li>
+                    <li><p>往届生手续办理时间：</p></li>
+                    <li><span>周四上午</span></li>
+                    <li><p>重新申领就业协议时间：</p></li>
+                    <li><span>周二、周四下午</span></li>
+                    <li><p>就业办咨询时间：</p></li>
+                    <li><span>上午：9：00 —— 12：00</span></li>
+                    <li><span>下午：13：00 —— 17：00</span></li>
+                    <li><p>友情链接：</p></li>
+                    <li><span>电子科技大学</span></li>
+                    <li><span>研究生院主页</span></li>
+                    <li><span>研招网</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="ad" id="picBox">
+                <div class="banner" id="b04">
+                    <ul>
+                        <!--<% try{ for(pic in slidePicList){%>-->
+
+                        <li>
+                            <img src="../image/21H.jpg" width="765" height="372"/>
+                        </li>
+                        <li>
+                            <img src="../image/28H.jpg" width="765" height="372"/>
+                        </li>
+                        <li>
+                            <img src="../image/36H.jpg" width="765" height="372"/>
+                        </li>
+
+                        <% }} catch(error){}%>
+                    </ul>
+               <!-- <div class="banner" id="b04">
+                    <ul class="slides">
+                        <li class="slide"><div class="box"><img src="../image/21H.jpg"></div></li>
+                        <li class="slide"><div class="box"><img src="../image/28H.jpg"></div></li>
+                        <li class="slide"><div class="box"><img src="../image/36H.jpg"></div></li>
+                    </ul>
+                </div>-->
+                    <!--  <a href="javascript:void(0);" class="unslider-arrow04 prev">
+                          <img class="arrow" id="al" src="/image/arrowl.png" alt="prev" width="20" height="35"></a>
+                      <a href="javascript:void(0);" class="unslider-arrow04 next">
+                          <img class="arrow" id="ar" src="/image/arrowr.png" alt="next" width="20" height="37"></a>-->
+                </div>
+
+            </div>
+            <div class="main-news">
+                <div class="kcBox2" id="kcBox2">
+                <div class="kcBox2-t1">
+                        <div class="kcBox2-tt">
+                            <h2>
+                                <a>招聘信息</a>
+                            </h2>
+                            <a class="kcBox-more" href="/articleList/jobInfo_recruit">More&gt&gt</a>
+                        </div>
+                        <div class="kcBox2-b">
+                            <div class="mod">
+                                <ul class="kcBox2-ul">
+                                    <% try{ for(jobInfo in homepageJobInfoRecruitList){%>
+                                    <li>
+                                        <a href="/jobInfo/${jobInfo.id}">${jobInfo.title}</a>
+
+                                        <div class="kcBox2-ul-p">
+                                            <!--<p>结束时间:<span>${jobInfo.holdTime,"yyyy-MM-dd"}</span></p>-->
+
+                                            <p>点击次数:<span>${jobInfo.clickNum}</span></p>
+                                        </div>
+                                    </li>
+                                    <% }} catch(error){}%>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="kcBox2-t1">
+                        <div class="kcBox2-tt clearfix">
+                            <h2>
+                                <a>招聘会信息</a>
+                            </h2>
+                            <a class="kcBox-more" href="/articleList/jobInfo_meeting">More&gt&gt</a>
+                        </div>
+                        <div class="kcBox2-b">
+                            <ul class="kcBox2-ul">
+                                <!--  <li>
+                                <a href="">ahhahahhahahhahahhah</a>
+                                <p>结束时间:</p>
+                                <p>点击次数:</p>
+                            </li>
+                            <li>
+                                <a href="">ahhahahhahahhahahhah</a>
+                                <p>结束时间:</p>
+                                <p>点击次数:</p>
+                            </li>
+                            <li>
+                                <a href="">ahhahahhahahhahahhah</a>
+                                <p>结束时间:</p>
+                                <p>点击次数:</p>
+                            </li>
+                            -->
+                                <% try{ for(jobInfo in homepageJobInfoMeetingList){%>
+                                <li>
+                                    <a href="/jobInfo/${jobInfo.id}">${jobInfo.title}</a>
+
+                                    <div class="kcBox2-ul-p">
+                                        <!--<p>结束时间:<span>${jobInfo.holdTime,"yyyy-MM-dd"}</span></p>-->
+                                        <p>点击次数:<span>${jobInfo.clickNum}</span></p>
+                                    </div>
+                                </li>
+                                <% }} catch(error){}%>
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="kcBox-3">
+                <div class="kcBox3-1">
+                    <h2>通告</h2>
+                    <a class="kcBox-more" href="/page/notice">More&gt&gt</a>
+                    <ul class="ulBox">
+
+                        <% try{ for(notice in homepageNoticeList){%>
+                        <li>
+                            <a href="/article/${notice.id}">${notice.title}</a>
+                        </li>
+                        <% }} catch(error){}%>
+                    </ul>
+                </div>
+                <div class="kcBox3-2">
+                    <h2>办事指南</h2>
+                    <a class="kcBox-more" href="/articleList/guide_student">More&gt&gt</a>
+                    <ul class="ulBox">
+                        <% try{ for(guide in homepageGuideStudentList){%>
+                        <li><a href="/article/${guide.id}">${guide.title}</a></li>
+                        <% }} catch(error){}%>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="footBar">
+        <p>©CopyRight 电子科技大学研究生院</p>
+
+        <p>清水河校区: 成都市高新区（西区）西源大道2006号 邮编:611731</p>
+
+        <p>沙河校区: 成都市建设北路二段四号 邮编:610054</p>
+        <p>您是第${visitedNum}位访问本站的用户</p>
+    </div>
+</div>
+<script type="text/javascript" src="../js/lib/jquery-1.11.1.js"></script>
+<script src="../js/plugin/unslider/unslider.min.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<script src="../js/lib/jquery.glide.min.js"></script>
+<!--<script src="/js/require.js" data-main='js/main1.js'></script>-->
+<script s
+</body>
+</html>
