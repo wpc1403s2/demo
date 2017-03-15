@@ -4,29 +4,42 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        body{
-            margin-left:300px;
-
-        }
+    body{
+        background:#eeeeee;
+    }
+       .reg-block{
+        margin: 100px auto;
+        padding: 20px
+        height: 870px;
+        width: 1000px;
+        padding-top: 5px;
+        padding-bottom: 55px;
+        margin: auto;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0 3px 3px #cbc9c9;
+        text-align: center;
+      }
         input{
             width: 40px;
             margin: 10px auto;
         }
         .box{
-            width: 230px;
+            padding-left:50px;
+            width: 330px;
             height: 140px;
         }
         button{
-            position: absolute;
-            top: 120px;
-            left: 550px;
+        margin-left: -200px;
+        margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
+<div class='reg-block'>
 <div class="box">
-<label>第一个的点 X:<input type="text" name="x1">  Y: <input type="text" name="y1"></label>
-<label>第二个的点 X:<input type="text" name="x2">  Y: <input type="text" name="y2"></label>
+<label>第一个的点 X:<input type="text" name="x1">  Y: <input type="text" name="y1"></label><br>
+<label>第二个的点 X:<input type="text" name="x2">  Y: <input type="text" name="y2"></label><br>
 <label>第三个的点 X:<input type="text" name="x3">  Y: <input type="text" name="y3"></label>
 </div>
 <button>三角形</button>
@@ -34,6 +47,9 @@
 <canvas height="600" width="800" id="canvas" style="border: 1px solid green" />
     <span class="glyphicon glyphicon-minus"></span>
 </div>
+</div>
+
+
 
 
 <script type="text/javascript">
