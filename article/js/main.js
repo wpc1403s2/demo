@@ -66,7 +66,7 @@ $(function () {
                 success:function (data) {
                     var json = $.parseJSON(data);
                     if(json.status==1){
-                        window.location.href='/4-20/admin.html';
+                        window.location.href='/article/admin.html';
                         $.cookie('user',$('#user_name').val(),{
                             expires:7,
                         });
