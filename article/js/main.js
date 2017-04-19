@@ -16,7 +16,7 @@ $(function () {
                     $("#reg_result").modal('toggle');
                     if(json.status==1){
                         setTimeout(function () {
-                            window.location.href = '/4-20/login.html';
+                            window.location.href = '/article/login.html';
                         },2000)
                     }
                 },
