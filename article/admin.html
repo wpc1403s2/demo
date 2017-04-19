@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="dist/bootstrap/css/bootstrap.css">
+
+</head>
+<body class="gray-bg">
+<div class="wrap flex-container">
+    <div class="list">
+        <div class="user-wrap">
+            <a href="" class="user-name" id="admin_name"></a>
+            <br>
+            <div class="btn-group-vertical" role="group" aria-label="..." id="btn_list">
+                <button class="btn btn-color btn-lg btn-block btn-color-active" type="button">文章添加</button>
+                <button class="btn btn-color btn-lg btn-block" type="button">文章查询</button>
+            </div>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <div class="page-wrapper-s">
+            <div class="header text-muted">
+                <h2>文章管理</h2>
+            </div>
+        <!--tab列表-->
+        <div id="tab_list">
+            <div class="tab-list selected">
+        <div class="page-top">
+            <nav class="navbar navbar-default">
+                <div class="add-btn-wrap">
+                <button type="button" class="btn btn-default navbar-btn" id="add" data-toggle="modal" data-target="#addArticleModal">添加</button>
+                    <div class="modal" tabindex="-1" role="dialog" id="addArticleModal">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title">新增文章</h4>
+                                </div>
+                                <form action="" id="add_article_form">
+                                <div class="modal-body">
+                                    <div class="add_info">
+                                    <label for="">
+                                        <p class="text-left">文章标题</p>
+                                        <input type="text" class="form-control" name="menuName">
+                                    </label>
+                                    <label for="">
+                                        <p class="text-left">分类</p>
+                                        <input type="text" class="form-control" name="sort">
+                                    </label>
+                                    <label for="">
+                                        <p class="text-left">备注</p>
+                                        <input type="text" class="form-control" name="remark">
+                                    </label>
+                                </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-green" id="add_article_btn">添加</button>
+                                </div>
+                                </form>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                </div>
+            </nav>
+        </div>
+        <div class="page-content text-center">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">文章列表</div>
+                <!-- Table -->
+                <table class="table text-center">
+                    <thead>
+                    <tr>
+                        <th class="text-center">文章名称</th>
+                        <th class="text-center">分类</th>
+                        <th class="text-center">备注</th>
+                        <th class="text-center">添加时间</th>
+                    </tr>
+                    </thead>
+                    <tbody id="add_tr_info">
+
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            </div>
+            <div class="tab-list">
+                <div class="page-top">
+                    <nav class="navbar navbar-default">
+                        <div class="add-btn-wrap">
+                        <form class="" role="search" id="searchForm">
+                            <button type="button" class="btn btn-default navbar-btn" id="searchBtn">查询</button>
+                        </form>
+                        </div>
+                    </nav>
+                </div>
+                <div class="page-content text-center">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">查询结果</div>
+                        <!-- Table -->
+                        <table class="table text-center">
+                            <thead>
+                            <tr>
+                                <th class="text-center">文章名称</th>
+                                <th class="text-center">添加时间</th>
+                                <th class="text-center">序号</th>
+                            </tr>
+                            </thead>
+                            <tbody id="searchResult">
+                            <tr id="resultList">
+
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div id="page"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!--模态框-->
+<form action="" class="modal-form">
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <div class="del-item">标题：<input type="text" class="form-control mod-title"></div>
+                <div class="del-item">分类：<input type="text" class="form-control mod-sort"></div>
+                <div class="del-item">备注：<input type="text" class="form-control mod-remark"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</form>
+<script src="dist/jquery/jquery.js"></script>
+<script src="dist/bootstrap/js/bootstrap.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/ajaxpage.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
